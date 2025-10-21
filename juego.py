@@ -8,8 +8,8 @@ clock = pygame.time.Clock()
 
 fondo = pygame.transform.scale(pygame.image.load("imagenes/fondo2.jpg"), (ANCHO, ALTO))
 jugador_img = pygame.transform.scale(pygame.image.load("imagenes/jugador.png"), (50, 50))
-riesgo_img = pygame.transform.scale(pygame.image.load("imagenes/estufa.png"), (40, 40))
-ventilador_img = pygame.transform.scale(pygame.image.load("imagenes/ventilador.png"), (60, 60))
+riesgo_img = pygame.transform.scale(pygame.image.load("imagenes/peligro.png"), (40, 40))
+ventilador_img = pygame.transform.scale(pygame.image.load("imagenes/ventilador.png"), (90, 90))
 
 pygame.mixer.music.load("sonidos/musica.mp3")
 pygame.mixer.music.play(-1)
@@ -82,10 +82,10 @@ while True:
 
     if juego_terminado:
         if gano:
-            msg = "¡Bien hecho! Ventilar salva vidas."
+            msg = "Ventilar el ambiente previene la intoxicacion"
             color = (0, 255, 0)
         else:
-            msg = "¡Peligro! Intoxicación por CO."
+            msg = "¡Peligro! Intoxicación por monoxido de carbono"
             color = (255, 0, 0)
         t = font.render(msg, True, color)
         pantalla.blit(t, (ANCHO//2 - t.get_width()//2, ALTO//2 - 40))
