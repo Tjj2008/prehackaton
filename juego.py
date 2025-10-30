@@ -82,8 +82,8 @@ while True:
 
     if juego_terminado:
         if gano:
-            msg = "Ventilar el ambiente previene la intoxicacion"
-            color = (0, 255, 0)
+            msg = "Recorda Ventilar el ambiente para prevenir intoxicación"
+            color = (0, 143, 57)
         else:
             msg = "¡Peligro! Intoxicación por monoxido de carbono"
             color = (255, 0, 0)
